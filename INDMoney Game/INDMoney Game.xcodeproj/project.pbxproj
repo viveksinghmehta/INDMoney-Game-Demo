@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		2E81DD7328DB224E00138500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD7228DB224E00138500 /* AppDelegate.swift */; };
 		2E81DD7528DB224E00138500 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD7428DB224E00138500 /* SceneDelegate.swift */; };
-		2E81DD7728DB224E00138500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD7628DB224E00138500 /* ViewController.swift */; };
-		2E81DD7A28DB224E00138500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E81DD7828DB224E00138500 /* Main.storyboard */; };
 		2E81DD7C28DB224F00138500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E81DD7B28DB224F00138500 /* Assets.xcassets */; };
 		2E81DD7F28DB224F00138500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E81DD7D28DB224F00138500 /* LaunchScreen.storyboard */; };
+		2E81DD9528DB244B00138500 /* GameContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD9028DB244B00138500 /* GameContract.swift */; };
+		2E81DD9628DB244B00138500 /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD9128DB244B00138500 /* GamePresenter.swift */; };
+		2E81DD9728DB244B00138500 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD9228DB244B00138500 /* GameRouter.swift */; };
+		2E81DD9828DB244B00138500 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD9328DB244B00138500 /* GameViewController.swift */; };
+		2E81DD9928DB244B00138500 /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DD9428DB244B00138500 /* GameInteractor.swift */; };
+		2E81DDC128DB509800138500 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDC028DB509800138500 /* GameCollectionViewCell.swift */; };
+		2E81DDC528DB50D000138500 /* Cell + ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDC428DB50D000138500 /* Cell + ReuseIdentifier.swift */; };
+		2E81DDC728DB525400138500 /* UIViewController + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDC628DB525400138500 /* UIViewController + Ext.swift */; };
+		2E81DDC928DB57C800138500 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDC828DB57C800138500 /* UIColor + Ext.swift */; };
+		2E81DDCB28DB5AE000138500 /* PaddedAndRoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDCA28DB5AE000138500 /* PaddedAndRoundedLabel.swift */; };
+		2E81DDCD28DB5FB900138500 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDCC28DB5FB900138500 /* Defaults.swift */; };
+		2E81DDD028DB600100138500 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81DDCF28DB600100138500 /* DefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E81DD6F28DB224E00138500 /* INDMoney Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "INDMoney Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E81DD7228DB224E00138500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E81DD7428DB224E00138500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2E81DD7628DB224E00138500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E81DD7928DB224E00138500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E81DD7B28DB224F00138500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E81DD7E28DB224F00138500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E81DD8028DB224F00138500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E81DD9028DB244B00138500 /* GameContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContract.swift; sourceTree = "<group>"; };
+		2E81DD9128DB244B00138500 /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		2E81DD9228DB244B00138500 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		2E81DD9328DB244B00138500 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2E81DD9428DB244B00138500 /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		2E81DDC028DB509800138500 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		2E81DDC428DB50D000138500 /* Cell + ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell + ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		2E81DDC628DB525400138500 /* UIViewController + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Ext.swift"; sourceTree = "<group>"; };
+		2E81DDC828DB57C800138500 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
+		2E81DDCA28DB5AE000138500 /* PaddedAndRoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedAndRoundedLabel.swift; sourceTree = "<group>"; };
+		2E81DDCC28DB5FB900138500 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		2E81DDCF28DB600100138500 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,97 @@
 		2E81DD7128DB224E00138500 /* INDMoney Game */ = {
 			isa = PBXGroup;
 			children = (
+				2E81DDC228DB50A500138500 /* Utils */,
+				2E81DDBA28DB502F00138500 /* Game-Module */,
 				2E81DD7228DB224E00138500 /* AppDelegate.swift */,
 				2E81DD7428DB224E00138500 /* SceneDelegate.swift */,
-				2E81DD7628DB224E00138500 /* ViewController.swift */,
-				2E81DD7828DB224E00138500 /* Main.storyboard */,
 				2E81DD7B28DB224F00138500 /* Assets.xcassets */,
 				2E81DD7D28DB224F00138500 /* LaunchScreen.storyboard */,
 				2E81DD8028DB224F00138500 /* Info.plist */,
 			);
 			path = "INDMoney Game";
+			sourceTree = "<group>";
+		};
+		2E81DDBA28DB502F00138500 /* Game-Module */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DDBF28DB507600138500 /* Contract */,
+				2E81DDBE28DB506D00138500 /* Presenter */,
+				2E81DDBC28DB505F00138500 /* Router */,
+				2E81DDBB28DB505800138500 /* View */,
+				2E81DDBD28DB506500138500 /* Interactor */,
+			);
+			path = "Game-Module";
+			sourceTree = "<group>";
+		};
+		2E81DDBB28DB505800138500 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DD9328DB244B00138500 /* GameViewController.swift */,
+				2E81DDC028DB509800138500 /* GameCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E81DDBC28DB505F00138500 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DD9228DB244B00138500 /* GameRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2E81DDBD28DB506500138500 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DD9428DB244B00138500 /* GameInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2E81DDBE28DB506D00138500 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DD9128DB244B00138500 /* GamePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2E81DDBF28DB507600138500 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DD9028DB244B00138500 /* GameContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		2E81DDC228DB50A500138500 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DDC328DB50AC00138500 /* Extensions */,
+				2E81DDCA28DB5AE000138500 /* PaddedAndRoundedLabel.swift */,
+				2E81DDCE28DB5FDD00138500 /* DefaultsKit */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2E81DDC328DB50AC00138500 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DDC428DB50D000138500 /* Cell + ReuseIdentifier.swift */,
+				2E81DDC628DB525400138500 /* UIViewController + Ext.swift */,
+				2E81DDC828DB57C800138500 /* UIColor + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2E81DDCE28DB5FDD00138500 /* DefaultsKit */ = {
+			isa = PBXGroup;
+			children = (
+				2E81DDCC28DB5FB900138500 /* Defaults.swift */,
+				2E81DDCF28DB600100138500 /* DefaultsKeys.swift */,
+			);
+			path = DefaultsKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +229,6 @@
 			files = (
 				2E81DD7F28DB224F00138500 /* LaunchScreen.storyboard in Resources */,
 				2E81DD7C28DB224F00138500 /* Assets.xcassets in Resources */,
-				2E81DD7A28DB224E00138500 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +239,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E81DD7728DB224E00138500 /* ViewController.swift in Sources */,
+				2E81DDC128DB509800138500 /* GameCollectionViewCell.swift in Sources */,
+				2E81DDCD28DB5FB900138500 /* Defaults.swift in Sources */,
+				2E81DD9728DB244B00138500 /* GameRouter.swift in Sources */,
+				2E81DD9628DB244B00138500 /* GamePresenter.swift in Sources */,
 				2E81DD7328DB224E00138500 /* AppDelegate.swift in Sources */,
 				2E81DD7528DB224E00138500 /* SceneDelegate.swift in Sources */,
+				2E81DDC528DB50D000138500 /* Cell + ReuseIdentifier.swift in Sources */,
+				2E81DD9828DB244B00138500 /* GameViewController.swift in Sources */,
+				2E81DD9928DB244B00138500 /* GameInteractor.swift in Sources */,
+				2E81DDCB28DB5AE000138500 /* PaddedAndRoundedLabel.swift in Sources */,
+				2E81DDC728DB525400138500 /* UIViewController + Ext.swift in Sources */,
+				2E81DDD028DB600100138500 /* DefaultsKeys.swift in Sources */,
+				2E81DDC928DB57C800138500 /* UIColor + Ext.swift in Sources */,
+				2E81DD9528DB244B00138500 /* GameContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2E81DD7828DB224E00138500 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E81DD7928DB224E00138500 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E81DD7D28DB224F00138500 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,11 +394,11 @@
 				DEVELOPMENT_TEAM = 22G8DE6XVC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "INDMoney Game/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +406,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viveksinghmehta.INDMoney-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,11 +425,11 @@
 				DEVELOPMENT_TEAM = 22G8DE6XVC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "INDMoney Game/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +437,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viveksinghmehta.INDMoney-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
