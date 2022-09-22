@@ -9,14 +9,14 @@ import UIKit
 
 final class GameCollectionViewCell: UICollectionViewCell {
     
-    private lazy var numberLabel: PaddingAndRoundedLabel = {
-        let label = PaddingAndRoundedLabel()
+    private lazy var numberLabel: UILabel = {
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.backgroundColor = .systemBackground
-        label.widthPadding = 10
-        label.heightPadding = 10
         label.textAlignment = .center
+        label.layer.cornerRadius = 15
+        label.clipsToBounds = true
         return label
     }()
     
@@ -67,7 +67,9 @@ final class GameCollectionViewCell: UICollectionViewCell {
         contentBackgroundView.addSubview(numberLabel)
         NSLayoutConstraint.activate([
             numberLabel.topAnchor.constraint(equalTo: contentBackgroundView.topAnchor, constant: 8),
-            numberLabel.trailingAnchor.constraint(equalTo: contentBackgroundView.trailingAnchor, constant: -8)
+            numberLabel.trailingAnchor.constraint(equalTo: contentBackgroundView.trailingAnchor, constant: -8),
+            numberLabel.heightAnchor.constraint(equalToConstant: 30),
+            numberLabel.widthAnchor.constraint(equalToConstant: 30)
         ])
         
     }

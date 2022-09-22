@@ -33,13 +33,16 @@ class GameInteractor: PresenterToInteractorGameProtocol {
             userPosition = random + position
             if (userPosition ?? 1) >= cells {
                 presenter?.finishedTheGame(with: random)
+                userPosition = cells
             } else {
                 presenter?.moveTheUser(newPosition: userPosition ?? 1, rollNumber: random)
             }
-            checkIfTheUserLandsOnCross(position: 10)
+            checkIfTheUserLandsOnCross(position: userPosition ?? 1)
         }
     }
     
+    
+    // check if user landed on cross
     func checkIfTheUserLandsOnCross(position: Int) {
         if let crossPositions = crossPositions {
             guard let index = crossPositions.firstIndex(where: { $0 == position }) else {
@@ -47,16 +50,22 @@ class GameInteractor: PresenterToInteractorGameProtocol {
                 return }
             if crossPositions[index] == crossPositions[0] {
                 // go back the first cell
-                print("here")
+                userPosition = 1
                 saveUserPosition(position: 1)
-                presenter?.takeUserTo1stCell()
+                // Delay of 2 sec so that the user can see on which cross he landed
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    self.presenter?.takeUserTo1stCell()
+                }
             } else {
                 // then go back 1 left of the previous cross
-
-                
+                let previousCell = crossPositions[index - 1] - 1
                 // go to the cell and change the user position
-                saveUserPosition(position: 1)
-                presenter?.userLandedOnCross(position: 1)
+                userPosition = previousCell
+                saveUserPosition(position: previousCell)
+                // Delay of 2 sec so that the user can see on which cross he landed
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    self.presenter?.userLandedOnCross(position: previousCell)
+                }
             }
         }
     }
@@ -75,7 +84,7 @@ class GameInteractor: PresenterToInteractorGameProtocol {
                     crossArray.append(number)
                 }
             }
-            crossPositions = crossArray
+            crossPositions = crossArray.sorted()
         }
     }
     

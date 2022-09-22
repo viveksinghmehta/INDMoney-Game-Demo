@@ -36,6 +36,9 @@ protocol ViewToPresenterGameProtocol {
     
     /// Setup the game for user
     func setUpGame()
+    
+    ///start new game
+    func startNewGame()
 }
 
 
@@ -54,7 +57,8 @@ protocol PresenterToInteractorGameProtocol {
     func rollTheDice()
     // Setup the game for user
     func setUpGame()
-    
+    //start new game
+    func setUpNewGame()
 }
 
 

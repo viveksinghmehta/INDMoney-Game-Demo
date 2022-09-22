@@ -22,6 +22,10 @@ class GamePresenter: ViewToPresenterGameProtocol {
     func setUpGame() {
         interactor?.setUpGame()
     }
+    
+    func startNewGame() {
+        interactor?.setUpNewGame()
+    }
 }
 
 extension GamePresenter: InteractorToPresenterGameProtocol {

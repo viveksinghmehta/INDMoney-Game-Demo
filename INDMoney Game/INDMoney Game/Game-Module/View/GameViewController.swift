@@ -38,6 +38,7 @@ final class GameViewController: UIViewController {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Roll"
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         return label
     }()
@@ -148,14 +149,25 @@ final class GameViewController: UIViewController {
     fileprivate func animateTheButton(with number: Int) {
         UIView.animate(withDuration: 1.0, delay: 0, options: [.autoreverse, .repeat, .curveEaseInOut]) {
             self.buttonTitle.text = "You got \(number)"
+            self.rollButton.isEnabled = false
         } completion: { _ in
-//            self.revertBackAnimation()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.revertBackAnimation()
+            }
         }
     }
     
     fileprivate func revertBackAnimation() {
-        UIView.animate(withDuration: 1.0, delay: 5.0) {
-            self.buttonTitle.text = "Something"
+        UIView.animate(withDuration: 1.0, delay: 0, options: [.curveEaseInOut]) {
+            self.rollButton.isEnabled = true
+            self.buttonTitle.text = "Roll"
+        }
+    }
+    
+    fileprivate func showNewGameAlert(_ action: UIAlertAction) {
+        self.showAlertWithYesHandler(type: .actionSheet, title: "You finished the game.", message: "Do you want to start a new game ?") { [weak self] action in
+            guard let weakself = self else { return }
+            weakself.presenter?.startNewGame()
         }
     }
     
@@ -166,13 +178,15 @@ extension GameViewController: PresenterToViewGameProtocol {
     func takeUserTo1stCell() {
         userPosition = 1
         gameCollectionView.reloadData()
-        self.showAlertWithOk(Title: "Ohh No !!!", message: "You landed on 1st cross you have start from 1st")
+        self.showAlertWithOk(Title: "😱 Ohh No !!!", message: "You landed on 1st cross you have start from 1st position")
+        gameCollectionView.scrollToItem(at: IndexPath(row: userPosition, section: 0), at: .bottom, animated: true)
     }
     
     func userLandedOnCross(position: Int) {
         userPosition = position
         gameCollectionView.reloadData()
-        self.showAlertWithOk(Title: "Ohh No !!!", message: "You landed on a cross")
+        self.showAlertWithOk(Title: "😨 Ohh No !!!", message: "You landed on a cross")
+        gameCollectionView.scrollToItem(at: IndexPath(row: userPosition, section: 0), at: .top, animated: true)
     }
     
     
@@ -180,6 +194,7 @@ extension GameViewController: PresenterToViewGameProtocol {
         userPosition = newPosition
         animateTheButton(with: rollNumber)
         gameCollectionView.reloadData()
+        gameCollectionView.scrollToItem(at: IndexPath(row: userPosition, section: 0), at: .bottom, animated: true)
     }
     
     func finishedTheGame(with number: Int) {
@@ -187,7 +202,8 @@ extension GameViewController: PresenterToViewGameProtocol {
         userPosition = numberOfCells
         animateTheButton(with: number)
         gameCollectionView.reloadData()
-        self.showAlertWithOk(Title: "Congratulations !!!", message: "You Completed the game")
+        gameCollectionView.scrollToItem(at: IndexPath(row: userPosition - 1, section: 0), at: .top, animated: true)
+        self.showAlertWithOneHandler(title: " 🥳 Congratulations !!!", message: "You Completed the game", handler: showNewGameAlert(_:))
     }
     
     func setUpGameWithInitialValues(cells: Int, userPosition: Int, crossPositions: [Int], newGame: Bool) {
@@ -195,6 +211,11 @@ extension GameViewController: PresenterToViewGameProtocol {
         self.userPosition = userPosition
         self.crossPositions = crossPositions
         gameCollectionView.reloadData()
+        if userPosition == 20 {
+            gameCollectionView.scrollToItem(at: IndexPath(row: userPosition - 1, section: 0), at: .top, animated: true)
+        } else {
+            gameCollectionView.scrollToItem(at: IndexPath(row: userPosition - 1, section: 0), at: .bottom, animated: true)
+        }
     }
     
     
